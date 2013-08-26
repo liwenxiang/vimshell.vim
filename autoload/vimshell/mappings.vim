@@ -128,7 +128,7 @@ function! vimshell#mappings#define_default_mappings() "{{{
 
   " Normal mode key-mappings.
   " Execute command.
-  nmap <buffer> <CR> <Plug>(vimshell_enter)
+  "nmap <buffer> <CR> <Plug>(vimshell_enter)
   " Hide vimshell.
   nmap <buffer> q <Plug>(vimshell_hide)
   " Exit vimshell.
@@ -174,7 +174,8 @@ function! vimshell#mappings#define_default_mappings() "{{{
   imap <buffer> <CR>                <C-]><Plug>(vimshell_enter)
 
   " History completion.
-  imap <buffer> <C-l> <Plug>(vimshell_history_unite)
+  imap <buffer> <C-r> <Plug>(vimshell_history_unite)
+  imap <buffer> <C-l> <Plug>(vimshell_clear)
 
   " Command completion.
   imap <buffer> <TAB>  <Plug>(vimshell_command_complete)
